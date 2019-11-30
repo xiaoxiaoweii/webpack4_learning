@@ -23,12 +23,17 @@ module.exports = {
                     loader: 'css-loader',
                     options: {
                         importLoaders: 2, //通过引入得到的css同样需要通过下边两个loader
-                        modules: true //开启css模块化打包
+                       // modules: true //开启css模块化打包
                     }
                 }, 
                 'sass-loader',
                 'postcss-loader'
             ]
+        }, {
+            test: /\.(eot|svg|ttf|woff)$/,
+            use: {
+                loader: 'file-loader'
+            }
         }]
     },
     output: {

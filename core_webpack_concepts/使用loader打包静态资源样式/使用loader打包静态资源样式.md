@@ -18,3 +18,7 @@ loader从下到上 从右到左执行
 
 
 
+webpack打包字体文件 字体文件用file-loader
+
+
+
