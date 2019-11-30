@@ -4,7 +4,10 @@ var { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
     mode: 'development',
-    entry: './src/index.js',
+    entry: {
+        main: './src/index.js',
+        sub: './src/index.js'
+},
     module: {
         rules: [{
             test: /\.(jpg|png|gif)$/,
@@ -42,7 +45,7 @@ module.exports = {
         template: 'src/index.html'
     }), new CleanWebpackPlugin()],
     output: {
-        filename: 'bundle.js',
+        filename: '[name].js',
         path: path.resolve(__dirname, 'dist')
     }
 }
