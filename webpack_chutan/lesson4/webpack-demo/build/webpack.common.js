@@ -55,11 +55,15 @@ module.exports = {
     plugins: [new HtmlWebpackPlugin({
         template: 'src/index.html'
     }), 
-        new CleanWebpackPlugin(),
-        new webpack.HotModuleReplacementPlugin()
+        new CleanWebpackPlugin()
     ],
+    optimization: {
+        splitChunks: {
+            chunks: 'all'
+        }
+    },
     output: {
         filename: '[name].js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, '../dist')
     }
 }

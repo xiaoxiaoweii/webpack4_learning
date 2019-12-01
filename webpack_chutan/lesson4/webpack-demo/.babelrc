@@ -8,4 +8,6 @@
 				useBuiltIns: 'usage'
 			}
 		],
-	]}
+	],
+	plugins: ["dynamic-import-webpack"]
+}
