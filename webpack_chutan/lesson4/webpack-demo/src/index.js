@@ -1,10 +1,5 @@
 
-// import _ from 'lodash';
-
-// // 业务逻辑  1mb
-// console.log(_.join(['a','b','c'],'***'));
-// //此处省略10万行代码
-// console.log(_.join(['a','b','c'],'***'));
+import _ from 'lodash';
 
 function getComponent() {
     return import(/* webpackChunkName: "lodash" */'lodash').then(({ default: _ }) => {
@@ -15,8 +10,13 @@ function getComponent() {
     })
 }
 
-getComponent().then(element => {  
-    document.body.appendChild(element);
-});
+document.addEventListener('click', () => {
+    getComponent().then(element => {  
+        document.body.appendChild(element);
+    });
+    
+})
+
+
 
 
