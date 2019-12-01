@@ -59,7 +59,14 @@ module.exports = {
     ],
     optimization: {
         splitChunks: {
-            chunks: 'all'
+            chunks: 'all',
+            cacheGroups: {
+                vendors: {
+                    test: /[\\/]node_modules[\\/]/,
+                    priority: -10
+                },
+                default: false
+            }
         }
     },
     output: {
