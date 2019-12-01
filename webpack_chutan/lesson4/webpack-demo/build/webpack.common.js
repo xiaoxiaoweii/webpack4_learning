@@ -66,7 +66,7 @@ module.exports = {
                     priority: -10
                 },
                 default: false
-            }
+            } 
         }
     },
     output: {
